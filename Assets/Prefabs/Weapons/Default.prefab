@@ -402,6 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallHitParticles: {fileID: 0}
+  feetGroundParticles: {fileID: 0}
 --- !u!1 &6750130259674721790
 GameObject:
   m_ObjectHideFlags: 0
