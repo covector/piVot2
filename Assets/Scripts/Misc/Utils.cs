@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public static class Utils
@@ -19,5 +21,19 @@ public static class Utils
     public static Vector3 Mult(Vector3 a, Vector3 b)
     {
         return new Vector3(a.x * b.x, a.y * b.y, a.z * b.z);
+    }
+
+    //public static void RunDelay(Action action, float delay, bool unscaledTime = false)
+    //{
+    //    GameManager.instance.StartCoroutine(_RunDelay(action, delay, unscaledTime));
+    //}
+    public static void RunDelay(MonoBehaviour mb, Action action, float delay, bool unscaledTime = false)
+    {
+        mb.StartCoroutine(_RunDelay(action, delay, unscaledTime));
+    }
+    public static IEnumerator _RunDelay(Action action, float delay, bool unscaledTime = false)
+    {
+        yield return unscaledTime ? new WaitForSecondsRealtime(delay) : new WaitForSeconds(delay);
+        action();
     }
 }

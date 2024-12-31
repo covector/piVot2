@@ -35,7 +35,7 @@ public class PussyMonster : Monster
 
     public override void Walk()
     {
-        rb.MovePosition(rb.position + PolarToCartesian((running ? 1.5f : 1f) * speed * PhoneScreenScaler.screenScale * Time.fixedDeltaTime, transform.eulerAngles.z));
+        rb.MovePosition(rb.position + PolarToCartesian((running ? 1.5f : 1f) * speed * Time.fixedDeltaTime, transform.eulerAngles.z));
     }
 
     new void Start()

@@ -20,7 +20,7 @@ public class Monster : MonoBehaviour
 
     public virtual void Walk()
     {
-        rb.MovePosition(rb.position + PolarToCartesian(speed * PhoneScreenScaler.screenScale * Time.fixedDeltaTime, transform.eulerAngles.z));
+        rb.MovePosition(rb.position + PolarToCartesian(speed * Time.fixedDeltaTime, transform.eulerAngles.z));
     }
     public virtual void Face()
     {
