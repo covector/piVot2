@@ -17,7 +17,6 @@ public class CrystalCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("Collided with " + collider.name);
         if (collider.CompareTag("Player"))
         {
             FindFirstObjectByType<ScoreCounter>().Increment();

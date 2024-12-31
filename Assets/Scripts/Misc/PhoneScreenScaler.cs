@@ -4,10 +4,13 @@
 public class PhoneScreenScaler : MonoBehaviour
 {
     public Vector2 minVisibility = Vector2.one;
+    Vector2 cachedSize = Vector2.zero;
 
     void Start()
     {
         Vector2 camTopRight = Camera.main.ViewportToWorldPoint(Vector2.one);
+        if (cachedSize == camTopRight) { return; }
+        cachedSize = camTopRight;
         float xRatio = minVisibility.x / camTopRight.x;
         float yRatio = minVisibility.y / camTopRight.y;
         if (xRatio > 1f || yRatio > 1f)
