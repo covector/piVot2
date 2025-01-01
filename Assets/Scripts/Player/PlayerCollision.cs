@@ -16,9 +16,6 @@ public class PlayerCollision : MonoBehaviour
     {
         switch (collider.tag)
         {
-            case "Coin":
-                CoinDetection(collider);
-                break;
             case "Monster":
                 EnemyDetection(collider);
                 break;
@@ -32,9 +29,6 @@ public class PlayerCollision : MonoBehaviour
     {
         switch (collider.tag)
         {
-            case "Coin":
-                CoinDetection(collider);
-                break;
             case "Wall":
                 WallDetection(collider);
                 break;
@@ -62,21 +56,16 @@ public class PlayerCollision : MonoBehaviour
                 particles.PlayWallHitParticles(new Vector2(collider.bounds.max.x, contactPart.position.y), dir);
                 break;
         }
-    }
 
-    private void CoinDetection(Collider2D collider)
-    {
-        if (head)
-        {
-            //collider.GetComponent<CoinBehaviour>().Collect();
-        }
+        FindFirstObjectByType<CameraShake>().InitShake(0.3f, 0.1f);
     }
 
     private void EnemyDetection(Collider2D collider)
     {
         if (head)
         {
-            //collider.GetComponent<EnemyBehaviour>().Killed();
+            collider.GetComponent<Monster>().Die();
+            FindFirstObjectByType<CameraShake>().InitShake(0.5f, 0.4f);
         }
         else
         {

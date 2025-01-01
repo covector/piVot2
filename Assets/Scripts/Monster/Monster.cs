@@ -3,19 +3,33 @@ using static Utils;
 
 public class Monster : MonoBehaviour
 {
-    public Transform target;
+    protected Transform target;
     public float speed;
     protected Rigidbody2D rb;
+    public ParticleSystem explodeParticle;
+    public ParticleSystem spawnParticle;
+    protected bool moving = true;
 
     protected void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        target = FindFirstObjectByType<PlayerSpawner>().player.transform;
+        //Instantiate(spawnParticle, transform.position, Quaternion.identity, FindFirstObjectByType<PhoneScreenScaler>().transform);
+        //GetComponent<Rigidbody2D>().simulated = false;
+        //RunDelay(this, () => {
+        //    GetComponent<Rigidbody2D>().simulated = true;
+        //    moving = true;
+        //}
+        //, 0.1f);
     }
 
     protected void Update()
     {
-        Face();
-        Walk();
+        if (moving)
+        {
+            Face();
+            Walk();
+        }
     }
 
     public virtual void Walk()
@@ -39,5 +53,12 @@ public class Monster : MonoBehaviour
         viewAngle += Mathf.Sign(delta) * Mathf.Min(200 * Time.deltaTime, Mathf.Abs(delta));
 
         transform.eulerAngles = new Vector3(0f, 0f, viewAngle);
+    }
+
+    public void Die()
+    {
+        GetComponent<Spawnee>().spawner.SpawnTillEnough();
+        Instantiate(explodeParticle, transform.position, Quaternion.identity, FindFirstObjectByType<PhoneScreenScaler>().transform);
+        Destroy(gameObject);
     }
 }

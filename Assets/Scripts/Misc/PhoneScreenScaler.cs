@@ -9,18 +9,12 @@ public class PhoneScreenScaler : MonoBehaviour
     void Start()
     {
         Vector2 camTopRight = Camera.main.ViewportToWorldPoint(Vector2.one);
-        if (cachedSize == camTopRight) { return; }
-        cachedSize = camTopRight;
+        if (cachedSize.x == Screen.width && cachedSize.y == Screen.height) { return; }
+        cachedSize = new Vector2(Screen.width, Screen.height);
         float xRatio = minVisibility.x / camTopRight.x;
         float yRatio = minVisibility.y / camTopRight.y;
-        if (xRatio > 1f || yRatio > 1f)
-        {
-            Camera.main.orthographicSize *= Mathf.Max(xRatio, yRatio);
-        } else
-        {
-            if (Mathf.Approximately(xRatio, 1f) || Mathf.Approximately(yRatio, 1f)) { return; }
-            Camera.main.orthographicSize *= Mathf.Min(xRatio, yRatio);
-        }
+        if (!(xRatio > 1f || yRatio > 1f) && (Mathf.Approximately(xRatio, 1f) || Mathf.Approximately(yRatio, 1f))) { return; }
+        Camera.main.orthographicSize *= Mathf.Max(xRatio, yRatio);
     }
 #if UNITY_EDITOR
     void Update()

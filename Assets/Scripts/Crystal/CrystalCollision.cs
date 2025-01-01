@@ -1,9 +1,11 @@
 using UnityEngine;
+using static Utils;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class CrystalCollision : MonoBehaviour
 {
     public Sprite[] variations;
+    public GameObject particle;
 
     private void Awake()
     {
@@ -13,6 +15,8 @@ public class CrystalCollision : MonoBehaviour
         }
         int ind = Random.Range(0, variations.Length);
         GetComponent<SpriteRenderer>().sprite = variations[ind];
+        GetComponent<SpriteRenderer>().enabled = false;
+        RunDelay(this, () => GetComponent<SpriteRenderer>().enabled = true, 0.1f);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -20,7 +24,8 @@ public class CrystalCollision : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             FindFirstObjectByType<ScoreCounter>().Increment();
-            FindFirstObjectByType<CrystalSpawner>().SpawnTillEnough();
+            GetComponent<Spawnee>().spawner.SpawnTillEnough();
+            Instantiate(particle, transform.position, Quaternion.identity, FindFirstObjectByType<PhoneScreenScaler>().transform);
             Destroy(gameObject);
         }
     }

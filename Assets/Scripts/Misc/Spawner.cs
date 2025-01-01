@@ -1,8 +1,7 @@
 using UnityEngine;
 using static Utils;
 
-[DisallowMultipleComponent]
-public class CrystalSpawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     public BoxCollider2D topWall;
     public BoxCollider2D rightWall;
@@ -10,7 +9,7 @@ public class CrystalSpawner : MonoBehaviour
     public BoxCollider2D leftWall;
     Vector2 areaMin;
     Vector2 areaMax;
-    public GameObject crystal;
+    public GameObject prefab;
     public int maxCrystals = 4;
     const float spawnDelay = 1f;
     public Vector2 paddingX;
@@ -26,7 +25,8 @@ public class CrystalSpawner : MonoBehaviour
     public void Spawn()
     {
         Vector2 pos = new Vector2(Random.Range(areaMin.x, areaMax.x), Random.Range(areaMin.y, areaMax.y));
-        Instantiate(crystal, pos, Quaternion.identity, transform);
+        GameObject obj = Instantiate(prefab, pos, Quaternion.identity, transform);
+        obj.GetComponent<Spawnee>().spawner = this;
     }
 
     public void SpawnTillEnough()
