@@ -1,0 +1,543 @@
+fileFormatVersion: 2
+guid: 533757bc279f22f4888cbe683613a095
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7690591177267560573
+    second: monster_spawn_spritesheet_0
+  - first:
+      213: 5475330128309113555
+    second: monster_spawn_spritesheet_1
+  - first:
+      213: -8275304502261981198
+    second: monster_spawn_spritesheet_2
+  - first:
+      213: -6338647743223016203
+    second: monster_spawn_spritesheet_3
+  - first:
+      213: 5935586934603724964
+    second: monster_spawn_spritesheet_4
+  - first:
+      213: -7789735529853085887
+    second: monster_spawn_spritesheet_5
+  - first:
+      213: 8139807446420751363
+    second: monster_spawn_spritesheet_6
+  - first:
+      213: -7348176498143710942
+    second: monster_spawn_spritesheet_7
+  - first:
+      213: 4710226217904103869
+    second: monster_spawn_spritesheet_8
+  - first:
+      213: -1276719711180045178
+    second: monster_spawn_spritesheet_9
+  - first:
+      213: 2536537300100025841
+    second: monster_spawn_spritesheet_10
+  - first:
+      213: -5837772633243543621
+    second: monster_spawn_spritesheet_11
+  - first:
+      213: 9080492136421333800
+    second: monster_spawn_spritesheet_12
+  - first:
+      213: 3247234020154002317
+    second: monster_spawn_spritesheet_13
+  - first:
+      213: 8978776372231003804
+    second: monster_spawn_spritesheet_14
+  - first:
+      213: 5669557632468684386
+    second: monster_spawn_spritesheet_15
+  - first:
+      213: 7491662562279937565
+    second: monster_spawn_spritesheet_16
+  - first:
+      213: 5624754532791136539
+    second: monster_spawn_spritesheet_17
+  - first:
+      213: 4550927150176278246
+    second: monster_spawn_spritesheet_18
+  - first:
+      213: 7668894972650719880
+    second: monster_spawn_spritesheet_19
+  - first:
+      213: 8638900450484245576
+    second: monster_spawn_spritesheet_20
+  - first:
+      213: 1996753591313377542
+    second: monster_spawn_spritesheet_21
+  - first:
+      213: 533433097701746957
+    second: monster_spawn_spritesheet_22
+  - first:
+      213: 2307633511009202123
+    second: monster_spawn_spritesheet_23
+  - first:
+      213: -2262276615082492776
+    second: monster_spawn_spritesheet_24
+  - first:
+      213: -1808206005220142974
+    second: monster_spawn_spritesheet_25
+  - first:
+      213: 3094984075697092159
+    second: monster_spawn_spritesheet_26
+  - first:
+      213: -6596889906304249808
+    second: monster_spawn_spritesheet_27
+  - first:
+      213: 9173849646436452347
+    second: monster_spawn_spritesheet_28
+  - first:
+      213: -3632663565573485867
+    second: monster_spawn_spritesheet_29
+  - first:
+      213: -2371520767755517980
+    second: monster_spawn_spritesheet_30
+  - first:
+      213: 294675866938269053
+    second: monster_spawn_spritesheet_31
+  - first:
+      213: 8315525026604692731
+    second: monster_spawn_spritesheet_32
+  - first:
+      213: -6747485680980242278
+    second: monster_spawn_spritesheet_33
+  - first:
+      213: 3531928561471042116
+    second: monster_spawn_spritesheet_34
+  - first:
+      213: 2188385983669801282
+    second: monster_spawn_spritesheet_35
+  - first:
+      213: 5245284882349648774
+    second: monster_spawn_spritesheet_36
+  - first:
+      213: 6033577149526916411
+    second: monster_spawn_spritesheet_37
+  - first:
+      213: 2396400305723981716
+    second: monster_spawn_spritesheet_38
+  - first:
+      213: 6699952225905539750
+    second: monster_spawn_spritesheet_39
+  - first:
+      213: -3492054830154666979
+    second: monster_spawn_spritesheet_40
+  - first:
+      213: 1876537252376850845
+    second: monster_spawn_spritesheet_41
+  - first:
+      213: -1931844097854195140
+    second: monster_spawn_spritesheet_42
+  - first:
+      213: 4434154666020103190
+    second: monster_spawn_spritesheet_43
+  - first:
+      213: 7721496327492705716
+    second: monster_spawn_spritesheet_44
+  - first:
+      213: -7807922486279122055
+    second: monster_spawn_spritesheet_45
+  - first:
+      213: 2736800294601013734
+    second: monster_spawn_spritesheet_46
+  - first:
+      213: -1904501662121769888
+    second: monster_spawn_spritesheet_47
+  - first:
+      213: -4865288084750936396
+    second: monster_spawn_spritesheet_48
+  - first:
+      213: 1475630405507927563
+    second: monster_spawn_spritesheet_49
+  - first:
+      213: -4287347835521273929
+    second: monster_spawn_spritesheet_50
+  - first:
+      213: 2903871470652268921
+    second: monster_spawn_spritesheet_51
+  - first:
+      213: -2410572344689603133
+    second: monster_spawn_spritesheet_52
+  - first:
+      213: -6833092135413418563
+    second: monster_spawn_spritesheet_53
+  - first:
+      213: -3844476911993923210
+    second: monster_spawn_spritesheet_54
+  - first:
+      213: 4849795786090230602
+    second: monster_spawn_spritesheet_55
+  - first:
+      213: -6532884095615446279
+    second: monster_spawn_spritesheet_56
+  - first:
+      213: -3833151581735965418
+    second: monster_spawn_spritesheet_57
+  - first:
+      213: -9085009723247090252
+    second: monster_spawn_spritesheet_58
+  - first:
+      213: -6671161488964413822
+    second: monster_spawn_spritesheet_59
+  - first:
+      213: -2372599416024357305
+    second: monster_spawn_spritesheet_60
+  - first:
+      213: 7899358579697886730
+    second: monster_spawn_spritesheet_61
+  - first:
+      213: -6274044881031464195
+    second: monster_spawn_spritesheet_62
+  - first:
+      213: -726475640130842093
+    second: monster_spawn_spritesheet_63
+  - first:
+      213: -6128328835860755199
+    second: monster_spawn_spritesheet_64
+  - first:
+      213: -2434383198698142934
+    second: monster_spawn_spritesheet_65
+  - first:
+      213: -2640845835526940931
+    second: monster_spawn_spritesheet_66
+  - first:
+      213: -9179675725404506518
+    second: monster_spawn_spritesheet_67
+  - first:
+      213: 4754388183524278136
+    second: monster_spawn_spritesheet_68
+  - first:
+      213: 704620324076330672
+    second: monster_spawn_spritesheet_69
+  - first:
+      213: 8712594005374441222
+    second: monster_spawn_spritesheet_70
+  - first:
+      213: 1115413895308403287
+    second: monster_spawn_spritesheet_71
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: monster_spawn_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 172
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7049c1ede77aba60800000000000000
+      internalID: 7690591177267560573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spawn_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 0
+        width: 172
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d2dbddfdb74cfb40800000000000000
+      internalID: 5475330128309113555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spawn_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 0
+        width: 172
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ffdb7e4666382d80800000000000000
+      internalID: -8275304502261981198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spawn_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 0
+        width: 172
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f45cdc06799808a0800000000000000
+      internalID: -6338647743223016203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spawn_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 0
+        width: 172
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a831827ed07f5250800000000000000
+      internalID: 5935586934603724964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spawn_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 0
+        width: 172
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1471ed0becc45e390800000000000000
+      internalID: -7789735529853085887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spawn_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 0
+        width: 172
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3040df7feb766f070800000000000000
+      internalID: 8139807446420751363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spawn_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 0
+        width: 172
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22135414868060a90800000000000000
+      internalID: -7348176498143710942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 96744e2e9974ebc4aa5e8462e4c04f25
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      monster_spawn_spritesheet_0: 7690591177267560573
+      monster_spawn_spritesheet_1: 5475330128309113555
+      monster_spawn_spritesheet_2: -8275304502261981198
+      monster_spawn_spritesheet_3: -6338647743223016203
+      monster_spawn_spritesheet_4: 5935586934603724964
+      monster_spawn_spritesheet_5: -7789735529853085887
+      monster_spawn_spritesheet_6: 8139807446420751363
+      monster_spawn_spritesheet_7: -7348176498143710942
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

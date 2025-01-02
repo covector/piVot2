@@ -6,21 +6,22 @@ public class Monster : MonoBehaviour
     protected Transform target;
     public float speed;
     protected Rigidbody2D rb;
-    public ParticleSystem explodeParticle;
-    public ParticleSystem spawnParticle;
-    protected bool moving = true;
+    public GameObject explodeEffect;
+    protected bool moving = false;
 
     protected void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         target = FindFirstObjectByType<PlayerSpawner>().player.transform;
-        //Instantiate(spawnParticle, transform.position, Quaternion.identity, FindFirstObjectByType<PhoneScreenScaler>().transform);
-        //GetComponent<Rigidbody2D>().simulated = false;
-        //RunDelay(this, () => {
-        //    GetComponent<Rigidbody2D>().simulated = true;
-        //    moving = true;
-        //}
-        //, 0.1f);
+        transform.eulerAngles = new Vector3(0f, 0f, Random.Range(0f, 360f));
+        moving = false;
+        GetComponent<Rigidbody2D>().simulated = false;
+    }
+
+    public void StartMoving()
+    {
+        GetComponent<Rigidbody2D>().simulated = true;
+        moving = true;
     }
 
     protected void Update()
@@ -58,7 +59,7 @@ public class Monster : MonoBehaviour
     public void Die()
     {
         transform.parent.GetComponent<Spawner>().SpawnTillEnough();
-        Instantiate(explodeParticle, transform.position, Quaternion.identity, FindFirstObjectByType<PhoneScreenScaler>().transform);
+        Instantiate(explodeEffect, transform.position, Quaternion.Euler(new Vector3(0, 0, target.eulerAngles.z + 180f)), FindFirstObjectByType<PhoneScreenScaler>().transform);
         Destroy(gameObject);
     }
 }

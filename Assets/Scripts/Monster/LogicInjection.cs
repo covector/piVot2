@@ -3,8 +3,7 @@ using UnityEngine;
 public class LogicInjection : MonoBehaviour
 {
     public float speed;
-    public ParticleSystem explodeParticle;
-    public ParticleSystem spawnParticle;
+    public GameObject explodeEffect;
 
     public enum MonsterType
     {
@@ -69,7 +68,6 @@ public class LogicInjection : MonoBehaviour
                 break;
         }
         comp.speed = speed;
-        comp.explodeParticle = explodeParticle;
-        comp.spawnParticle = spawnParticle;
+        comp.explodeEffect = explodeEffect;
     }
 }
