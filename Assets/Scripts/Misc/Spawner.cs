@@ -26,7 +26,6 @@ public class Spawner : MonoBehaviour
     {
         Vector2 pos = new Vector2(Random.Range(areaMin.x, areaMax.x), Random.Range(areaMin.y, areaMax.y));
         GameObject obj = Instantiate(prefab, pos, Quaternion.identity, transform);
-        obj.GetComponent<Spawnee>().spawner = this;
     }
 
     public void SpawnTillEnough()

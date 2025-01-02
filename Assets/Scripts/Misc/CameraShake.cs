@@ -4,6 +4,8 @@ using UnityEngine;
 public class CameraShake : MonoBehaviour
 {
     private float timePassed;
+    Coroutine current = null;
+
     private IEnumerator Shake(float time, float magnitude)
     {
         float variation = Random.Range(0f, 100f);
@@ -15,9 +17,11 @@ public class CameraShake : MonoBehaviour
             timePassed += Time.deltaTime;
             yield return null;
         }
+        current = null;
     }
     public void InitShake(float time, float magnitude)
     {
-        StartCoroutine(Shake(time, magnitude));
+        if (current != null) { StopCoroutine(current); }
+        current = StartCoroutine(Shake(time, magnitude));
     }
 }

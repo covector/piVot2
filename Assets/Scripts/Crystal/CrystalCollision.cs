@@ -24,7 +24,7 @@ public class CrystalCollision : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             FindFirstObjectByType<ScoreCounter>().Increment();
-            GetComponent<Spawnee>().spawner.SpawnTillEnough();
+            transform.parent.GetComponent<Spawner>().SpawnTillEnough();
             Instantiate(particle, transform.position, Quaternion.identity, FindFirstObjectByType<PhoneScreenScaler>().transform);
             Destroy(gameObject);
         }

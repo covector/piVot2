@@ -57,7 +57,10 @@ public class PlayerCollision : MonoBehaviour
                 break;
         }
 
-        FindFirstObjectByType<CameraShake>().InitShake(0.3f, 0.1f);
+        if (head)
+        {
+            FindFirstObjectByType<CameraShake>().InitShake(0.3f, 0.1f);
+        }
     }
 
     private void EnemyDetection(Collider2D collider)

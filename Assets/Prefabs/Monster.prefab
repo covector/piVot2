@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 6508059165811285933}
   - component: {fileID: 1265404018968593064}
   - component: {fileID: 7445042709745951958}
-  - component: {fileID: 5265837749939938496}
   - component: {fileID: 5039982411082953584}
   - component: {fileID: 3400675534340858979}
-  - component: {fileID: -9155759342361744093}
+  - component: {fileID: -1791242597077740270}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Monster
@@ -102,22 +101,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5265837749939938496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2618496167170078359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7edaf4c9b4a6a094f83835fd73f7c456, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  explodeParticle: {fileID: 5371967289725307547, guid: e08793d09f35e944ea1fe58e39e68b34, type: 3}
-  spawnParticle: {fileID: 5371967289725307547, guid: fa7da063bc8e7ba449ef1edc28008ab7, type: 3}
-  searchPeriod: 1.5
 --- !u!198 &5039982411082953584
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4918,7 +4901,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &-9155759342361744093
+--- !u!114 &-1791242597077740270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4927,9 +4910,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2618496167170078359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d059e13c857e92479e9806a6e428005, type: 3}
+  m_Script: {fileID: 11500000, guid: e1b63e95cea413c48a61374357651c62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  explodeParticle: {fileID: 5371967289725307547, guid: e08793d09f35e944ea1fe58e39e68b34, type: 3}
+  spawnParticle: {fileID: 5371967289725307547, guid: fa7da063bc8e7ba449ef1edc28008ab7, type: 3}
 --- !u!1 &3560082727345903904
 GameObject:
   m_ObjectHideFlags: 0

@@ -57,7 +57,7 @@ public class Monster : MonoBehaviour
 
     public void Die()
     {
-        GetComponent<Spawnee>().spawner.SpawnTillEnough();
+        transform.parent.GetComponent<Spawner>().SpawnTillEnough();
         Instantiate(explodeParticle, transform.position, Quaternion.identity, FindFirstObjectByType<PhoneScreenScaler>().transform);
         Destroy(gameObject);
     }
