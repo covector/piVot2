@@ -30,6 +30,10 @@ public class GameManager : MonoBehaviour
             gameOver = false;
             Restart();
         }
+        if (gameOver && Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     void Restart()
