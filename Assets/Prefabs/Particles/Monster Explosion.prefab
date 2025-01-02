@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 802197085067287885}
   - component: {fileID: 4465637499308667626}
   - component: {fileID: 5592929958848223393}
+  - component: {fileID: 5612744924837192166}
   m_Layer: 0
   m_Name: Monster Explosion
   m_TagString: Untagged
@@ -125,3 +126,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 1.5
   fadeTime: 1
+--- !u!114 &5612744924837192166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7387142463478338148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f880c5286f3360549abee2164ccc319c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

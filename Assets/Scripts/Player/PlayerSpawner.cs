@@ -13,7 +13,7 @@ public class PlayerSpawner : MonoBehaviour
     public ParticleSystem wallHitParticles;
     public ParticleSystem feetGroundParticles;
 
-    private void Start()
+    public void Spawn()
     {
         player = Instantiate(weapons[(int)playerType], transform.position, Quaternion.identity, transform);
         player.GetComponent<PlayerParticles>().wallHitParticles = wallHitParticles;

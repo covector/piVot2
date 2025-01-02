@@ -19,7 +19,6 @@ public class Spawner : MonoBehaviour
     {
         areaMax = new Vector2(rightWall.bounds.min.x - paddingX.y, topWall.bounds.min.y - paddingY.y);
         areaMin = new Vector2(leftWall.bounds.max.x + paddingX.x, bottomWall.bounds.max.y + paddingY.x);
-        SpawnTillEnough();
     }
 
     public void Spawn()

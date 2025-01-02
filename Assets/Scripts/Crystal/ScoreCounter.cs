@@ -18,6 +18,11 @@ public class ScoreCounter : MonoBehaviour
         Display();
     }
 
+    public void Reset()
+    {
+        count = 0;
+        Display();
+    }
     private void Display()
     {
         counter.text = count > 0 ? count.ToString() : "";

@@ -14,14 +14,19 @@ public class Monster : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         target = FindFirstObjectByType<PlayerSpawner>().player.transform;
         transform.eulerAngles = new Vector3(0f, 0f, Random.Range(0f, 360f));
-        moving = false;
-        GetComponent<Rigidbody2D>().simulated = false;
+        StopMoving();
     }
 
     public void StartMoving()
     {
-        GetComponent<Rigidbody2D>().simulated = true;
         moving = true;
+        GetComponent<Rigidbody2D>().simulated = true;
+    }
+
+    public void StopMoving()
+    {
+        moving = false;
+        GetComponent<Rigidbody2D>().simulated = false;
     }
 
     protected void Update()

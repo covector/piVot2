@@ -72,7 +72,12 @@ public class PlayerCollision : MonoBehaviour
         }
         else
         {
-            //player.Killed();
+            foreach (Monster monster in FindObjectsByType<Monster>(FindObjectsSortMode.None))
+            {
+                monster.StopMoving();
+            }
+            GameManager.instance.GameOver();
+            Destroy(engine.gameObject);
         }
     }
 }
