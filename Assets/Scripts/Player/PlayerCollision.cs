@@ -6,10 +6,28 @@ public class PlayerCollision : MonoBehaviour
     public PivotEngine engine;
     PlayerParticles particles;
     public bool head;
+    private static bool loseFlag = false;
+    private static bool killFlag = false;
 
     private void Start()
     {
         particles = engine.GetComponent<PlayerParticles>();
+    }
+
+    private void LateUpdate()
+    {
+        if (head) { return; }
+        if (loseFlag && !killFlag)
+        {
+            foreach (Monster monster in FindObjectsByType<Monster>(FindObjectsSortMode.None))
+            {
+                monster.StopMoving();
+            }
+            GameManager.instance.GameOver();
+            Destroy(engine.gameObject);
+        }
+        loseFlag = false;
+        killFlag = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -69,15 +87,11 @@ public class PlayerCollision : MonoBehaviour
         {
             collider.GetComponent<Monster>().Die();
             FindFirstObjectByType<CameraShake>().InitShake(0.5f, 0.4f);
+            killFlag = true;
         }
         else
         {
-            foreach (Monster monster in FindObjectsByType<Monster>(FindObjectsSortMode.None))
-            {
-                monster.StopMoving();
-            }
-            GameManager.instance.GameOver();
-            Destroy(engine.gameObject);
+            loseFlag = true;
         }
     }
 }

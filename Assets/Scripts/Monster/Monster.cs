@@ -14,6 +14,7 @@ public class Monster : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         target = FindFirstObjectByType<PlayerSpawner>().player.transform;
         transform.eulerAngles = new Vector3(0f, 0f, Random.Range(0f, 360f));
+        GetComponent<Collider2D>().enabled = false;
         StopMoving();
     }
 
@@ -21,6 +22,7 @@ public class Monster : MonoBehaviour
     {
         moving = true;
         GetComponent<Rigidbody2D>().simulated = true;
+        RunDelay(this, () => GetComponent<Collider2D>().enabled = true, 0.1f);
     }
 
     public void StopMoving()

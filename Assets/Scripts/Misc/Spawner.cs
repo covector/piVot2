@@ -11,9 +11,10 @@ public class Spawner : MonoBehaviour
     Vector2 areaMax;
     public GameObject prefab;
     public int maxCrystals = 4;
-    const float spawnDelay = 1f;
+    public float spawnDelay = 1f;
     public Vector2 paddingX;
     public Vector2 paddingY;
+    private Coroutine spawnRoutine;
 
     void Start()
     {
@@ -29,13 +30,18 @@ public class Spawner : MonoBehaviour
 
     public void SpawnTillEnough()
     {
-        RunDelay(this, () =>
+        if (spawnRoutine != null)
+        {
+            StopCoroutine(spawnRoutine);
+        }
+        spawnRoutine = RunDelay(this, () =>
         {
             if (transform.childCount < maxCrystals)
             {
                 Spawn();
                 SpawnTillEnough();
             }
+            spawnRoutine = null;
         }, spawnDelay);
     }
 }
