@@ -31,7 +31,7 @@ public class LogicInjection : MonoBehaviour
         return MonsterType.Default;
     }
 
-    private void Start()
+    private void Awake()
     {
         //MonsterType type = (MonsterType)Random.Range(0, (int)MonsterType.Size);
         MonsterType type = GetRandomType();

@@ -2,7 +2,7 @@ using UnityEngine;
 using static Utils;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class CrystalCollision : MonoBehaviour
+public class CrystalCollision : Spawnee
 {
     public Sprite[] variations;
     public GameObject particle;
@@ -24,7 +24,7 @@ public class CrystalCollision : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             FindFirstObjectByType<ScoreCounter>().Increment();
-            transform.parent.GetComponent<Spawner>().SpawnTillEnough();
+            Respawn();
             Instantiate(particle, transform.position, Quaternion.identity, FindFirstObjectByType<PhoneScreenScaler>().transform);
             Destroy(gameObject);
         }

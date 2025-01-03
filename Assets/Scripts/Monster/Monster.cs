@@ -1,7 +1,7 @@
 using UnityEngine;
 using static Utils;
 
-public class Monster : MonoBehaviour
+public class Monster : Spawnee
 {
     protected Transform target;
     public float speed;
@@ -68,7 +68,7 @@ public class Monster : MonoBehaviour
 
     public void Die()
     {
-        transform.parent.GetComponent<Spawner>().SpawnTillEnough();
+        Respawn();
         Instantiate(explodeEffect, transform.position, Quaternion.Euler(new Vector3(0, 0, target.eulerAngles.z + 180f)), FindFirstObjectByType<PhoneScreenScaler>().transform);
         Destroy(gameObject);
     }

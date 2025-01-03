@@ -33,10 +33,12 @@ public class GameManager : MonoBehaviour
             gameOver = false;
             Restart();
         }
+#if UNITY_STANDALONE
         if (gameOver && Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
         }
+#endif
     }
 
     void Restart()
@@ -51,7 +53,7 @@ public class GameManager : MonoBehaviour
         playerSpawner.Spawn();
         foreach (Spawner spawner in FindObjectsByType<Spawner>(FindObjectsSortMode.None))
         {
-            spawner.SpawnTillEnough();
+            spawner.Reset();
         }
 
         FindFirstObjectByType<ScoreCounter>().Reset();

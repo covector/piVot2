@@ -1,7 +1,7 @@
+using System.Collections;
 using UnityEngine;
-using static Utils;
 
-public class Spawner : MonoBehaviour
+public abstract class Spawner : MonoBehaviour
 {
     public BoxCollider2D topWall;
     public BoxCollider2D rightWall;
@@ -10,11 +10,12 @@ public class Spawner : MonoBehaviour
     Vector2 areaMin;
     Vector2 areaMax;
     public GameObject prefab;
-    public int maxCrystals = 4;
+    public int maxSpawn = 4;
     public float spawnDelay = 1f;
     public Vector2 paddingX;
     public Vector2 paddingY;
-    private Coroutine spawnRoutine;
+    private IEnumerator initRoutine;
+    protected GameObject[] spawnedObjects;
 
     void Start()
     {
@@ -22,26 +23,36 @@ public class Spawner : MonoBehaviour
         areaMin = new Vector2(leftWall.bounds.max.x + paddingX.x, bottomWall.bounds.max.y + paddingY.x);
     }
 
-    public void Spawn()
+    public void Reset()
+    {
+        CleanUp();
+        if (spawnedObjects == null) { spawnedObjects = new GameObject[maxSpawn]; }
+        for (int i = 0; i < maxSpawn; i++)
+        {
+            spawnedObjects[i] = null;
+        }
+        if (initRoutine != null) { StopCoroutine(initRoutine); }
+        StartCoroutine(initRoutine = SequentialSpawn());
+    }
+
+    public void Spawn(int index)
     {
         Vector2 pos = new Vector2(Random.Range(areaMin.x, areaMax.x), Random.Range(areaMin.y, areaMax.y));
         GameObject obj = Instantiate(prefab, pos, Quaternion.identity, transform);
+        obj.GetComponent<Spawnee>().index = index;
+        obj.GetComponent<Spawnee>().spawner = this;
+        spawnedObjects[index] = obj;
     }
 
-    public void SpawnTillEnough()
+    IEnumerator SequentialSpawn()
     {
-        if (spawnRoutine != null)
+        for (int i = 0; i < maxSpawn; i++)
         {
-            StopCoroutine(spawnRoutine);
+            yield return new WaitForSeconds(spawnDelay);
+            Spawn(i);
         }
-        spawnRoutine = RunDelay(this, () =>
-        {
-            if (transform.childCount < maxCrystals)
-            {
-                Spawn();
-                SpawnTillEnough();
-            }
-            spawnRoutine = null;
-        }, spawnDelay);
     }
+
+    protected abstract void CleanUp();
+    public abstract void ScheduleSpawn(int index);
 }

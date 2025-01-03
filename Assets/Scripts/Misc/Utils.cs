@@ -27,9 +27,11 @@ public static class Utils
     //{
     //    GameManager.instance.StartCoroutine(_RunDelay(action, delay, unscaledTime));
     //}
-    public static Coroutine RunDelay(MonoBehaviour mb, Action action, float delay, bool unscaledTime = false)
+    public static IEnumerator RunDelay(MonoBehaviour mb, Action action, float delay, bool unscaledTime = false)
     {
-        return mb.StartCoroutine(_RunDelay(action, delay, unscaledTime));
+        IEnumerator coroutine = _RunDelay(action, delay, unscaledTime);
+        mb.StartCoroutine(coroutine);
+        return coroutine;
     }
     public static IEnumerator _RunDelay(Action action, float delay, bool unscaledTime = false)
     {

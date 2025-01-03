@@ -159,7 +159,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 37087912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59af478f8b3910342ba7f5ed3e50b1ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 46454e73c3bc26147a818a9cb4284b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   topWall: {fileID: 505043329}
@@ -167,7 +167,7 @@ MonoBehaviour:
   bottomWall: {fileID: 1889902934}
   leftWall: {fileID: 531921882}
   prefab: {fileID: 2863074212894684599, guid: 1f3204b7765e55840ba16a121928514e, type: 3}
-  maxCrystals: 4
+  maxSpawn: 4
   spawnDelay: 1
   paddingX: {x: 0.2, y: 0.2}
   paddingY: {x: 1, y: 0.2}
@@ -6627,7 +6627,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1621611732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59af478f8b3910342ba7f5ed3e50b1ed, type: 3}
+  m_Script: {fileID: 11500000, guid: e2caa46373a65ef4c9f53db1dd80cef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   topWall: {fileID: 505043329}
@@ -6635,7 +6635,7 @@ MonoBehaviour:
   bottomWall: {fileID: 1889902934}
   leftWall: {fileID: 531921882}
   prefab: {fileID: 2618496167170078359, guid: 0ed6633a8d4b1cd4ba4ea785d3aa49d9, type: 3}
-  maxCrystals: 2
+  maxSpawn: 2
   spawnDelay: 4
   paddingX: {x: 0.2, y: 0.2}
   paddingY: {x: 0.2, y: 0.2}

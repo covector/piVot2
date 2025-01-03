@@ -225,6 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5141f3852d74baa47a6315f5842f46ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
+  spawner: {fileID: 0}
   variations:
   - {fileID: -7465245247761154217, guid: 1d8662ed23493be4e86aa6cc944df736, type: 3}
   - {fileID: -2523832804540183141, guid: 88268d48aae727648baa546a99857f51, type: 3}
