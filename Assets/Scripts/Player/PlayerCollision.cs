@@ -91,7 +91,9 @@ public class PlayerCollision : MonoBehaviour
         }
         else
         {
-            loseFlag = true;
+            if (!collider.GetComponent<Monster>().harmless) {
+                loseFlag = true;
+            }
         }
     }
 }

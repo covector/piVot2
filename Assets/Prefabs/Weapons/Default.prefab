@@ -390,6 +390,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f60b446e65f083145867d208c7dfd99e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  control:
+    m_Name: Control
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 215ece51-3712-4f23-8464-17c5f33b712d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!114 &366873742975824510
 MonoBehaviour:
   m_ObjectHideFlags: 0

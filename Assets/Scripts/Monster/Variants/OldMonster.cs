@@ -7,7 +7,7 @@ public class OldMonster : Monster
     private Vector3 memorizedPos = Vector2.zero;
     public override void Face()
     {
-        searchCooldown += Time.deltaTime;
+        searchCooldown += Time.fixedDeltaTime;
         if (searchCooldown > searchPeriod)
         {
             searchCooldown = 0;

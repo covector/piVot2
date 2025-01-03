@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [DisallowMultipleComponent]
 public class GameManager : MonoBehaviour
@@ -7,6 +8,7 @@ public class GameManager : MonoBehaviour
     public bool gameOver { get; private set; }  = false;
     public GameObject wallHitParticle;
     public GameObject feetGroundParticle;
+    InputAction reset;
     public void GameOver()
     {
         Time.timeScale = 0;
@@ -20,12 +22,13 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        reset = InputSystem.actions.FindAction("Reset");
         Restart();
     }
 
     private void Update()
     {
-        if (gameOver && Input.GetKeyDown(KeyCode.R))
+        if (gameOver && reset.WasPressedThisFrame())
         {
             gameOver = false;
             Restart();

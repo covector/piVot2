@@ -8,30 +8,33 @@ public class Monster : MonoBehaviour
     protected Rigidbody2D rb;
     public GameObject explodeEffect;
     protected bool moving = false;
+    public bool harmless { get; protected set; } = true;
 
     protected void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         target = FindFirstObjectByType<PlayerSpawner>().player.transform;
         transform.eulerAngles = new Vector3(0f, 0f, Random.Range(0f, 360f));
-        GetComponent<Collider2D>().enabled = false;
         StopMoving();
+        harmless = true;
     }
 
     public void StartMoving()
     {
         moving = true;
+        GetComponent<Collider2D>().enabled = true;
         GetComponent<Rigidbody2D>().simulated = true;
-        RunDelay(this, () => GetComponent<Collider2D>().enabled = true, 0.1f);
+        RunDelay(this, () => harmless = false, 0.3f);
     }
 
     public void StopMoving()
     {
         moving = false;
+        GetComponent<Collider2D>().enabled = false;
         GetComponent<Rigidbody2D>().simulated = false;
     }
 
-    protected void Update()
+    protected void FixedUpdate()
     {
         if (moving)
         {
@@ -58,7 +61,7 @@ public class Monster : MonoBehaviour
         targetAngle += (viewAngle > targetAngle + 180 ? 360 : 0) - (viewAngle < targetAngle - 180 ? 360 : 0);
 
         float delta = targetAngle + targetAngleOffset - viewAngle;
-        viewAngle += Mathf.Sign(delta) * Mathf.Min(200 * Time.deltaTime, Mathf.Abs(delta));
+        viewAngle += Mathf.Sign(delta) * Mathf.Min(200 * Time.fixedDeltaTime, Mathf.Abs(delta));
 
         transform.eulerAngles = new Vector3(0f, 0f, viewAngle);
     }

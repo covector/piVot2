@@ -8,7 +8,7 @@ public class SmartMonster : Monster
     private float lookAheadFactor = 1f;
     public override void Face()
     {
-        searchCooldown += Time.deltaTime;
+        searchCooldown += Time.fixedDeltaTime;
         if (searchCooldown > searchPeriod)
         {
             searchCooldown = 0;

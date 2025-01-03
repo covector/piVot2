@@ -9,7 +9,7 @@ public class DrunkMonster : Monster
     private int swing = 1;
     public override void Face()
     {
-        offsetAngle += swing * swingSpeed * Time.deltaTime;
+        offsetAngle += swing * swingSpeed * Time.fixedDeltaTime;
         if (offsetAngle > maxOffsetAngle) {
             swing = -1;
             offsetAngle = maxOffsetAngle;

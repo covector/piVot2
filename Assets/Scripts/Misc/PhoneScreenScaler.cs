@@ -16,10 +16,9 @@ public class PhoneScreenScaler : MonoBehaviour
         if (!(xRatio > 1f || yRatio > 1f) && (Mathf.Approximately(xRatio, 1f) || Mathf.Approximately(yRatio, 1f))) { return; }
         Camera.main.orthographicSize *= Mathf.Max(xRatio, yRatio);
     }
-#if UNITY_EDITOR
+
     void Update()
     {
         Start();
     }
-#endif
 }
